@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buen día, mi amor ❤️</title>
+  <style>
+
+
+    :root{
+      --bg: linear-gradient(135deg,#FFE7E9 0%, #FFF6E8 50%, #E8F7FF 100%);
+      --card:#FFE7E9 ;
+      --accent:#ff2d55;
+      --shadow: 0 10px 30px rgba(16,24,40,0.15);
+      --glass: rgba(255,255,255,0.6);
+    }
+    html,body{
+
+
+      height:100%;
+      margin:0;
+      font-family: ;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:200px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      border-radius:20px;
+      background: linear-gradient(180deg, rgba(159, 213, 209)), rgba(159, 213, 209));
+      box-shadow: var(--shadow);
+      padding:20px;
+      position:relative;
+      overflow:hidden;
+      text-align:center;
+      backdrop-filter: blur(6px);
+    }
+
+    header{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+    .heart{
+      width:48px;
+      height:48px;
+      background:var(--accent);
+      clip-path:path("M24 44s-18-11.6-18-24.5C6 9 14 4 18.5 7c2.6 1.8 5.5 5.2 5.5 5.2s2.9-3.4 5.5-5.2C38 4 46 9 46 19.5 46 32.4 24 44 24 44z");
+      filter: drop-shadow(0 6px 10px rgba(255,45,85,0.18));
+      transform-origin:center;
+      animation: pulse 1500ms infinite;
+    }
+
+    @keyframes pulse{
+      0% { transform:scale(1); }
+      50% { transform:scale(1.08); }
+      100% { transform:scale(1); }
+    }
+
+    h1{
+      margin:0;
+      font-size:1.4rem;
+      line-height:1.1;
+      color:#10203a;
+    }
+    p.lead{
+      margin:10px 0 18px 0;
+      color:#314759;
+      font-size:0.98rem;
+    }
+
+    .row{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      align-items:flex-end;
+      margin-bottom:18px;
+    }
+    bo
+
+    /* Simple stylized "Ralph" and "Vanellope" avatars made with SVG containers */
+    /*.avatar{
+      width:110px;
+      height:130px;
+      background:var(--glass);
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      padding:8px;
+      box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+      transform-origin:center;
+      transition: transform 300ms ease;*/
+  /*  }
+    .avatar:hover{ transform: translateY(-6px) scale(1.02); }
+
+    .name{
+      margin-top:8px;
+      font-weight:600;
+      color:#0b2540;
+      font-size:0.92rem;
+    }
+    .desc{
+      font-size:0.78rem;
+      color:#4b6b84;
+      margin-top:4px;
+    }*/
+
+    /* confetti */
+    .confetti{
+      pointer-events:none;
+      position:absolute;
+      inset:0;
+      overflow:hidden;
+      z-index:5;
+    }
+    .confetti i{
+      position:absolute;
+      width:10px;
+      height:18px;
+      opacity:0.95;
+      transform-origin:center;
+      animation: fall linear infinite;
+    }
+    @keyframes fall{
+      to { transform: translateY(120vh) rotate(360deg); opacity:0.9; }
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin-top:8px;
+    }
+    button{
+      border:0;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:0.95rem;
+      cursor:pointer;
+      box-shadow: 0 6px 14px rgba(16,24,40,0.08);
+
+    }
+    .primary{
+      background:linear-gradient(90deg,#ff6b8a,#ff2d55);
+      color:white;
+    }
+    .secondary{
+      background:transparent;
+      border:1px solid rgba(16,24,40,0.06);
+    }
+
+    footer{
+      margin-top:16px;
+      font-size:0.8rem;
+      color:#7b8b98;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:420px){
+      .row{ gap:10px; }
+      .avatar{ width:95px; height:115px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <div class="confetti" aria-hidden="true"></div>
+
+    <header>
+      <div class="heart" aria-hidden="true"></div>
+      <h1>¡Buen día, mi amor!</h1>
+    </header>
+
+    <p class="lead">Hoy te mando un abrazo enorme y un beso cargado de alegría. también te desean un día lleno de risas y aventuras. 💖</p>
+
+    <div class="row" aria-hidden="false">
+      <!-- Ralph-like avatar (estilizado) -->
+      <img src="https://static.wikia.nocookie.net/disney/images/e/e2/Profile_-_Wreck_It_Ralph.jpeg/revision/latest/scale-to-width-down/1000?cb=20220526025601" alt="Ralph" width="100" height="100">
+       <div class="avatar" title="Ralph">
+         <!--<svg width="70" height="70" viewBox="0 0 100 100" aria-hidden="true"> AVATAR-->
+          <!-- body -->
+          <rect x="22" y="40" width="56" height="42" rx="8" fill="#d66b4b"/>
+          <!-- head -->
+          <circle cx="50" cy="28" r="20" fill="#f0c9b0"/>
+          <!-- hair -->
+          <path d="M35 18c8-12 30-12 30 0" fill="#2b2b2b"/>
+          <!-- smile -->
+          <path d="M40 34 q10 12 20 0" stroke="#6b3b2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+    
+      </div>
+
+      <!-- Vanellope-like avatar (estilizado) -->
+      <img src="https://i.pinimg.com/1200x/3d/85/7c/3d857c4f844084d94a35a201cf89d8f3.jpg" alt="Vanellope" width="100" height="100">
+      <div class="avatar" title="Vanellope">
+           <!--<svg width="70" height="70" viewBox="0 0 100 100" aria-hidden="true"> AVATAR -->
+          <!-- body -->
+          <rect x="28" y="42" width="44" height="36" rx="10" fill="#b6e3d9"/>
+          <!-- head -->
+          <circle cx="50" cy="26" r="18" fill="#f7d7d9"/>
+          <!-- hair with bow -->
+          <path d="M34 22c6-12 32-12 34 0" fill="#4d2d6b"/>
+          <rect x="66" y="12" width="8" height="6" rx="1.5" fill="#ff7bac" transform="rotate(20 70 15)"/>
+          <!-- smile -->
+          <path d="M42 32 q8 9 16 0" stroke="#6b3b2a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        
+      </div>
+    </div>
+
+    <div>
+      <button class="primary" id="surpriseBtn" aria-label="Enviar beso">Enviar beso 😘</button>
+      <button class="secondary" id="toggleConfetti" aria-pressed="false">Confeti</button>
+       <button class="primary" id="playMusic">🎵 Reproducir música</button>
+    </div>
+
+    <footer>Hecho con mucho cariño la BANANA😘 — ¡Que tengas un día espectacular! 🌞</footer>
+  </div>
+  <audio id="bgMusic" loop>
+    <!-- Puedes poner el link de tu canción favorita en formato MP3 -->
+    <source src="C:\Users\PRREMIG01\Downloads\Nueva carpeta\SONIDO.MP3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+   <script>
+    const music = document.getElementById('bgMusic');
+    const playBtn = document.getElementById('playMusic');
+    const kissBtn = document.getElementById('sendKiss');
+
+    playBtn.addEventListener('click', ()=>{
+      if(music.paused){
+        music.play();
+        playBtn.textContent = "⏸️ Pausar música";
+      } else {
+        music.pause();
+        playBtn.textContent = "🎵 Reproducir música";
+      }
+    });
+
+    kissBtn.addEventListener('click', ()=>{
+      const float = document.createElement('div');
+      float.textContent = '😘';
+      Object.assign(float.style,{
+        position:'fixed',
+        left: (window.innerWidth/2)+'px',
+        top: (window.innerHeight/2)+'px',
+        fontSize:'40px',
+        transform:'translate(-50%,-50%)',
+        transition:'all 1.2s ease-out',
+        opacity:1,
+        zIndex:9999
+      });
+      document.body.appendChild(float);
+      requestAnimationFrame(()=>{
+        float.style.transform = 'translate(-50%,-200%) scale(1.5)';
+        float.style.opacity = 0;
+      });
+      setTimeout(()=> float.remove(),1200);
+    });
+  </script>
+
+  <script>
+    // Small interaction: play a gentle "kiss" sound (synth) and animate heart
+    const btn = document.getElementById('surpriseBtn');
+    const heart = document.querySelector('.heart');
+    const confettiContainer = document.querySelector('.confetti');
+    const confBtn = document.getElementById('toggleConfetti');
+
+    btn.addEventListener('click', () => {
+      // Heart pop
+      heart.animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.25)' },
+        { transform: 'scale(1)' }
+      ], { duration: 420, easing: 'ease-out' });
+
+      // small beep-kiss using WebAudio API
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = 'sine';
+        o.frequency.setValueAtTime(880, ctx.currentTime);
+        g.gain.setValueAtTime(0, ctx.currentTime);
+        g.gain.linearRampToValueAtTime(0.12, ctx.currentTime + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.4);
+        o.connect(g); g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + 0.45);
+      } catch (e) {
+        // no audio support, ignore
+
+
+      }
+
+      // tiny floating emoji animation
+      const float = document.createElement('div');
+      float.textContent = '😘 Te amo Uriel💖';
+      Object.assign(float.style, {
+        position:'fixed',
+        left: (window.innerWidth/2 + (Math.random()*80-40)) + 'px',
+        top: (window.innerHeight/2 + (Math.random()*30-20)) + 'px',
+        fontSize:'28px',
+        pointerEvents:'none',
+        transform:'translateY(0)',
+        transition:'transform 900ms ease-out, opacity 900ms ease-out',
+        opacity:1,
+        zIndex:9999
+      });
+      document.body.appendChild(float);
+      requestAnimationFrame(()=> {
+        float.style.transform = 'translateY(-160px) scale(1.2)';
+        float.style.opacity = '0';
+      });
+      setTimeout(()=> float.remove(), 1000);
+    });
+
+    // Confetti generator
+    let confettiOn = false;
+    confBtn.addEventListener('click', () => {
+      confettiOn = !confettiOn;
+      confBtn.textContent = confettiOn ? 'Detener' : 'Confeti';
+      confBtn.setAttribute('aria-pressed', confettiOn ? 'true' : 'false');
+      if(confettiOn) startConfetti(); else stopConfetti();
+    });
+
+    let confettiInterval;
+    function rand(min,max){ return Math.random()*(max-min)+min; }
+
+    function startConfetti(){
+      confettiContainer.innerHTML = '';
+      confettiInterval = setInterval(()=>{
+        const piece = document.createElement('i');
+        const left = rand(-10,100);
+        const delay = rand(0,500);
+        piece.style.left = left + '%';
+        piece.style.top = '-10%';
+        piece.style.width = (rand(6,12)) + 'px';
+        piece.style.height = (rand(10,20)) + 'px';
+        piece.style.background = ['#ff2d55','#ffcc00','#5ac8fa','#34c759','#ff7bac'][Math.floor(rand(0,5))];
+        piece.style.transform = `rotate(${rand(0,360)}deg)`;
+        piece.style.opacity = rand(0.85,1);
+        piece.style.animationDuration = rand(1.6,2.8) + 's ';
+        piece.style.left = left + '%';
+        confettiContainer.appendChild(piece);
+        // remove after animation
+        setTimeout(()=> piece.remove(), 3200);
+      }, 120);
+    }
+    function stopConfetti(){
+      clearInterval(confettiInterval);
+      confettiContainer.innerHTML = '';
+    }
+
+    // Auto small confetti on load for delight
+    window.addEventListener('load', ()=> {
+      // play a short confetti burst
+      startConfetti();
+      setTimeout(stopConfetti, 1600);
+    });
+
+    // Accessibility: allow Enter on focused buttons
+    [btn, confBtn].forEach(el => {
+      el.addEventListener('keyup', (e) => { if(e.key === 'Enter') el.click(); });
+
+
+    });
+
+
+  </script>
+</body>
+</html>
